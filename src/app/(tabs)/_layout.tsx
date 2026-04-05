@@ -1,0 +1,21 @@
+import Ionicons from "@expo/vector-icons/Ionicons";
+import {NativeTabs, Icon, Label} from "expo-router/unstable-native-tabs";
+
+export default function Layout() {
+    return (
+        <NativeTabs>
+            <NativeTabs.Trigger name="pokedex">
+                <Icon sf={{default: "list.bullet", selected: "list.bullet"}} 
+                    drawable="ic_menu_sort_by_size"
+                />
+                <Label>Pokedex</Label>
+            </NativeTabs.Trigger>
+            <NativeTabs.Trigger name="favorites">
+                <Icon sf={{default: "heart", selected: "heart.fill"}} 
+                    drawable="star_on"
+                />
+                <Label>Favorites</Label>
+            </NativeTabs.Trigger>
+        </NativeTabs>
+    )
+}
